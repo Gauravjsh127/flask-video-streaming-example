@@ -1,0 +1,10 @@
+version: '3'
+services:
+    video-streaming-microservice:
+        build: .
+        image: video-streaming-microservice
+        container_name: video-streaming-container
+        ports:
+            - "5000:5000" ## system port can be any but docker port is fix 5000 for flask docker app: Limitation of docker
+        expose:
+            - "5000"   
